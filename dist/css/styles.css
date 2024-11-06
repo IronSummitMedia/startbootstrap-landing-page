@@ -10918,3 +10918,6 @@ footer.footer {
   padding-bottom: 4rem;
 }
 
+.hidden {
+  display: none;
+}
