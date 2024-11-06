@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connexion et Inscription</title>
+  <link rel="stylesheet" href="signup-form.css">
+</head>
+<body>
+  <div class="container">
+    <div class="form-box">
+      <h2 id="form-title">Inscription</h2>
+
+      <!-- Formulaire d'Inscription -->
+      <form id="signup-form" class="form" action="#" method="post">
+        <input type="text" name="username" placeholder="Nom d'utilisateur" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="password" placeholder="Mot de passe" required>
+        <button type="submit">S'inscrire</button>
+        <p>Déjà inscrit ? <a href="index_login.html" onclick="toggleForm(event)">Se connecter</a></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

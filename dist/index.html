@@ -20,7 +20,7 @@
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
                 <a class="navbar-brand" href="#!">Start Bootstrap</a>
-                <a class="btn btn-primary" href="#signup">Sign Up</a>
+                <a class="btn btn-primary" href="signup-form.html">Sign Up</a>
             </div>
         </nav>
         <!-- Masthead-->
@@ -66,6 +66,21 @@
                                 <!-- an error submitting the form-->
                                 <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                             </form>
+                            <script>
+                                function submitEmail() {
+                                    const email = document.getElementById('emailInput').value;
+                        
+                                    fetch('save_email.php', {
+                                        method: 'POST',
+                                        headers: { 'Content-Type': 'application/json' },
+                                        body: JSON.stringify({ email: email })
+                                    })
+                                    .then(response => response.json())
+                                    .then(data => alert(data.message))
+                                    .catch(error => console.error('Erreur:', error));
+                                }
+                            </script>
+                        
                         </div>
                     </div>
                 </div>
